@@ -248,7 +248,7 @@ video {
     margin: 0 auto;
     margin-top: 3%;
     padding: 50px 20px;
-    background: url(/images/white\ background.jpg);
+    background: url(../images/white\ background.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -460,7 +460,7 @@ video {
   .summer-text{
     text-align: left;
     height: 180px;
-    background: url(/images/white\ corner.jpg);
+    background: url(../images/white\ corner.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -618,7 +618,7 @@ video {
     justify-content: center;
     align-items: center;
     height: 500px;
-    background:linear-gradient(rgba(69, 69, 69, 0.5), #0F403C), url(/images/business.jpg);
+    background:linear-gradient(rgba(69, 69, 69, 0.5), #0F403C), url(../images/business.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -867,7 +867,7 @@ video {
 .about{
   width: 100%;
   height: 400px;
-  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(/images/about\ bacc\ 1.jpeg);
+  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(../images/about\ bacc\ 1.jpeg );
   background-position: center;
   background-size: cover;
 }
@@ -1205,7 +1205,7 @@ video {
 .deals-travel{
   width: 50%;
   height: 450px;
-  background: url(/images/Untitled-2.jpg);
+  background: url(../images/Untitled-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1214,7 +1214,7 @@ video {
 .deals-image{
   width: 50%;
   height: 450px;
-  background:linear-gradient(rgba(0,0,0,0.5), #f8f8f8), url(/images/deals.jpeg);
+  background:linear-gradient(rgba(0,0,0,0.5), #f8f8f8), url(../images/deals\ image.jpeg);
   background-position: center;
   background-size: cover;
   float: right;
@@ -1259,7 +1259,7 @@ video {
   .deals-travel{
     width: 100%! important;
     height: 250px! important;
-    background: url(/images/Untitled-2.jpg);
+    background: url(../images/Untitled-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1267,7 +1267,7 @@ video {
   .deals-image{
     width: 100%! important;
     height: 250px! important;
-    background:linear-gradient(rgba(0,0,0,0.5), #2f2f2f41), url(/images/deals.jpeg);
+    background:linear-gradient(rgba(0,0,0,0.5), #2f2f2f41), url(../images/deals.jpeg);
   }
   .deals-travel h3{
     color: #fff;
@@ -1311,7 +1311,7 @@ video {
   .deals-travel{
     width: 100%! important;
     height: 250px! important;
-    background: url(/images/Untitled-2.jpg);
+    background: url(../images/Untitled-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1319,7 +1319,7 @@ video {
   .deals-image{
     width: 100%! important;
     height: 250px! important;
-    background:linear-gradient(rgba(0,0,0,0.5), #2f2f2f41), url(/images/deals.jpeg);
+    background:linear-gradient(rgba(0,0,0,0.5), #2f2f2f41), url(../images/deals.jpeg);
   }
   .deals-travel h3{
     color: #fff;
@@ -1468,7 +1468,7 @@ video {
 .services{
   width: 100%;
   height: 400px;
-  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(/images/services\ bacc.jpeg);
+  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(../images/services\ bacc.jpeg );
   background-position: center;
   background-size: cover;
 }
@@ -1637,7 +1637,7 @@ video {
 .reservation{
   width: 100%;
   height: 400px;
-  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(/images/reservation\ bacc.jpeg);
+  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(../images/reservation\ bacc.jpeg);
   background-position: center;
   background-size: cover;
 }
@@ -1890,7 +1890,7 @@ video {
 .contact{
   width: 100%;
   height: 400px;
-  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(/images/contact\ bacc.jpeg);
+  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(../images/contact\ bacc.jpeg);
   background-position: center;
   background-size: cover;
 }
