@@ -5,6 +5,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.logo{
+   width: 40%;
+   height: 50px;
+}
+.logo-img{
+  width: 20%;
+  height: 50px;
+}
 
 .navbar {
   background: #0000;
@@ -25,18 +33,9 @@
   background-color: #0F403C;
   color: #fff;
 }
-
-.search-button {
-  background:transparent;
-  color:#0F403C ;
+.search-input{
   border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 10px;
-  cursor: pointer;
+  border-bottom: 1px solid #333;
 }
 .search-btn{
   background:transparent;
@@ -101,6 +100,24 @@
       font-size: 12px;
     }
   }
+  @media screen and (max-width: 768px){
+    .logo{
+      width: 50%;
+      height: 50px;
+   }
+   .logo-img{
+     width: 50%;
+     height: 50px;
+   }
+    .search-input {
+      font-size: 10px;
+      padding: 5px 7px;
+    }
+    .search-btn{
+      font-size: 13px;
+      padding: 5px;
+    }
+  }
   
   .video-section {
     position: relative;
@@ -131,11 +148,31 @@ video {
 .video-content  h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .video-content  p {
     font-size: 18px;
     margin-bottom: 30px;
+    color: #fff;
+}
+@media screen and (max-width: 320px){
+  .video-content  h1 {
+   color: #fff;
+}
+
+.video-content  p {
+    color: #fff;
+}
+}
+@media screen and (max-width: 768px){
+  .video-content  h1 {
+   color: #fff;
+}
+
+.video-content  p {
+    color: #fff;
+}
 }
 
   .book-button {
@@ -146,7 +183,31 @@ video {
     text-decoration: none;
     font-size: 20px;
     border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
+  .book-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0F403C;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+  .book-button:hover {
+    color: #fff; 
+    transform: translateX(5px); 
+  }
+
+  .book-button:hover::before {
+    left: 0;
+  }
+  
 
   @media screen and (max-width: 768px) {
     .video-content  h1 {
@@ -188,7 +249,12 @@ video {
 .card  .icon {
     font-size: 48px;
     margin-bottom: 10px;
+    color: #939393;
+    transition: .6s;
+  }
+  .card .icon:hover{
     color: #0F403C;
+    transition: .6s;
   }
 
 .card h2 {
@@ -202,19 +268,60 @@ video {
   @media screen and (max-width:320px){
     .booking-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: column !important;
       justify-content: space-around;
       width: 100%;
       margin: 0 auto;
     }
     .hotel-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: column !important;
       justify-content: space-around;
       width: 100%;
       margin: 0 auto;
     }
   
+    .card {
+      width: 80%;
+      height: 200px;
+      margin-left: 10%;
+      text-align: center;
+    }
+
+    .card  .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #0F403C;
+    }
+  
+  .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+  .card  p {
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    body, html{
+      overflow-x: hidden;
+    }
+    .booking-container {
+      display: flex;
+      flex-direction: column !important;
+      justify-content: space-around;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hotel-container {
+      display: flex;
+      flex-direction: column !important;
+      justify-content: space-around;
+      width: 100%;
+      margin: 0 auto;
+    }
     .card {
       width: 80%;
       height: 200px;
@@ -286,7 +393,6 @@ video {
 
   .travel-section  .image-container {
     flex: 1;
-    text-align: right;
   }
 
   .travel-section .image-container img {
@@ -332,21 +438,35 @@ video {
 
 
   .travel-section  .image-container {
-    width: 90%;
-    height: 180px;
-    margin-top: 2%;
-  }
-
-  .travel-section .image-container img {
+    flex: 1;
     width: 100%;
-    height: 150px;
-    border-radius: 0px;
+    align-items: center;
+  }
+  
+  #travel-image{
+    margin-top: 4%;
+    width: 80%;
+    margin-left: 10%;
+    height: 190px! important;
   }
   }
 
   @media screen and (max-width: 768px) {
+    body, html{
+      overflow-x: hidden;
+    }
+    .travel-section {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      width: 100%;
+      height: 540px;
+      margin: 0 auto;
+      margin-top: 3%;
+      padding: 50px 20px;
+    }
+  
     .text-content {
-      flex: 100%;
       padding-right: 0;
       text-align: center;
     }
@@ -369,16 +489,86 @@ video {
       text-decoration: none;
       font-size: 10px;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 10px !important;
     }
   
   
     .travel-section  .image-container {
       flex: 1;
-      text-align: right;
+      width: 100%;
+      align-items: center;
     }
-  
+    
+    #travel-image{
+      margin-top: 4%;
+      width: 80%;
+      margin-left: 10%;
+      height: 300px;
+    }
   }
+
+  .country-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f6f6f6;
+    width: 100%;
+    height: 510px;
+}
+
+.country-card {
+    flex: 1;
+    margin: 15px;
+    background: #fff;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.country-card img {
+  width: 100%;
+  height: 350px;
+}
+
+.country-card:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  width: 100%;
+  cursor: pointer;
+}
+.country-card-content {
+  margin: 10px;
+  margin-top: 15px;
+  text-align: left;
+}
+.country-card-content span{
+  color: #ff7b00;
+}
+.country-card-content #circle{
+  font-size: 6px;
+  margin-right: 3%;
+}
+.country-card-content p{
+  color: #6b6b6b;
+}
+@media screen and (max-width: 320px){
+  .country-section {
+    flex-direction: column;
+    height: 1500px;
+}
+}
+@media screen and (max-width: 768px){
+  .country-section {
+    flex-direction: column;
+    height: 1500px;
+}
+  
+  .country-card{
+    width: 90%;
+    margin-left: 5%;
+  }
+}
 
   .mission-section {
     display: flex;
@@ -498,13 +688,31 @@ video {
     }
   }
 
+  @media screen and (max-width: 768px){
+    .summer-text  h2 {
+      font-size: 20px;
+      margin-left: 3%;
+      color: #0F403C;
+    }
+    .summer-text  h1 {
+      font-size: 20px;
+      margin-left: 3%;
+    }
+  
+    .summer-text  p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-left: 3%;
+    }
+  }
   .packages-container {
     display: flex;
     justify-content: space-between;
+    background: #f6f6f6;
     width: 100%;
     height: 700px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 10px;
   }
   .packages-carrier {
     display: flex;
@@ -512,15 +720,20 @@ video {
     width: 100%;
     height: 700px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 10px;
+    background: #f6f6f6;
   }
 
   .packages-card {
-    background: #0F403C;
-    border-radius: 5px;
-    padding: 20px;
+    margin: 50px;
+    padding: 10px;
     width: 45%;
+    background: #ffff;
   }
+  .packages-card h2, p{
+    color: #333;
+  }
+
 
   .slideshow-container {
     max-width: 100%;
@@ -532,21 +745,19 @@ video {
 
   .slideshow-images {
     display: flex;
-    animation: slide 10s infinite;
+    animation: slide 30s infinite;
   }
 
   .slideshow-images img {
     width: 100%;
-    height: 100%;
+    max-height: 100%;
+    height: 300px;
     object-fit: cover;
-  }
+}
 
   @keyframes slide {
-    0%, 100% { transform: translateX(0); }
-    20% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
+    0%  { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
 
   .packages-text {
@@ -565,30 +776,19 @@ video {
   }
 @media screen and (max-width:320px){
   .packages-container {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 100%;
-    height: 700px;
-    margin: 0 auto;
-    padding: 50px;
+    height: 800px! important;
   }
   .packages-carrier {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 100%;
-    height: 700px;
-    margin: 0 auto;
-    padding: 50px;
+    height: 800px! important;
   }
 
   .packages-card {
-    background: #0F403C;
-    border-radius: 5px;
-    padding: 10px;
     width: 90%;
-    height: 280px;
+    height: 600px;
     margin-left: 5%;
   }
   .slideshow-container {
@@ -612,6 +812,34 @@ video {
     font-size: 6px;
     line-height: 1.6;
   }
+}
+@media screen and (max-width: 768px){
+  .packages-container {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1300px;
+  }
+  .packages-carrier{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1500px;
+  }
+  .packages-card {
+    width: 90%;
+    height: 500px;
+    margin-left: 5%;
+  }
+
+  .packages-text h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  .packages-text  p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
 }
   .youtube {
     display: flex;
@@ -707,6 +935,7 @@ video {
       font-size: 15px;
      }
  }
+ 
   .testimonial-section {
     display: flex;
     justify-content: space-between;
@@ -771,6 +1000,16 @@ video {
       font-size: 12px;
     }
   
+  }
+  @media screen and (max-width: 768px){
+    .testimonial-section {
+      flex-direction: column;
+    }
+    .testimonial-card{
+      width: 90%;
+      margin-left: 5%;
+      margin: 20px;
+    }
   }
 
   .globe{
@@ -891,15 +1130,14 @@ video {
   color: #fff;
 }
 @media screen and (max-width:280px){
-  .search-input{
-    margin-left: 3%;
-   font-size: 12px;
+  .logo{
+    width: 60%;
+    height: 50px;
  }
- .search-button {
-      padding: 5px 20px;
-      font-size: 12px;
-      color: #fff;
-    }
+ .logo-img{
+   width: 60%;
+   height: 50px;
+ }
 }
 
 @media screen and (max-width:320px){
@@ -1009,6 +1247,7 @@ video {
     width: 90%;
     height: 330px;
     margin-left: 5%;
+    font-size: 11px;
   }
 }
 
@@ -1540,7 +1779,7 @@ video {
     width: 95%;
     height: 340px;
     margin-left: 2.5%;
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -1628,8 +1867,8 @@ video {
     flex-wrap: wrap; 
   }
   .offer-card{
-    width: 80%! important;
-    margin-left: 10%;
+    width: 95%! important;
+    margin-left: 2.5%;
   }
 }
 
@@ -1886,6 +2125,51 @@ video {
     border-radius: 10px;
    }
  }
+ @media screen and (max-width: 768px){
+  .reservation{
+    height: 500px;
+  }
+  .reservation h2{
+    font-size: 30px;
+  }
+  
+  .reservation-signup{
+    display: flex;
+    flex-direction: column;
+    height: 770px;
+  }
+  .login{
+    width: 90%! important;
+    height: 330px! important;
+    float: left;
+    margin-left:5%;
+   }
+
+   .logreg-box .form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%! important;
+    height: 350px! important;
+   }
+   .form-box h2{
+    font-size: 20px;
+   }
+   .form-box .input-box{
+    position: relative;
+    width: 80%! important;
+    height: 50px;
+    margin-left: 10%;
+   }
+   .form-box .remember-forgot{
+    font-size: 12px;
+   }
+   .reservation-signup .img{
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+   }
+ }
 
 .contact{
   width: 100%;
@@ -1925,6 +2209,11 @@ video {
     font-size: 20px! important;
   }
 }
+@media screen and (max-width: 768px){
+  .contact{
+    height: 450px;
+  }
+}
 .contact p{
   text-align: center;
   color: #fff;
@@ -1936,9 +2225,6 @@ video {
 .contact a:hover{
   background-color: #0F403C;
   color: #fff;
-}
-@media screen and (max-width: 320px){
-
 }
 
 .contact-content{
@@ -1957,14 +2243,17 @@ video {
 }
 
 .contact-card .icon {
-    font-size: 48px;
+    font-size: 45px;
     margin-bottom: 10px;
     color: #fff;
 }
 
 .contact-text {
-    font-size: 18px;
+    font-size: 15px;
     color: #fff;
+}
+.contact-text p{
+  color: #fff;
 }
 
 @media screen and (max-width: 280px){
@@ -2009,8 +2298,7 @@ video {
       text-align: center;
       width: 90%;
       height: 100px! important;
-      margin: 0 1rem! important;
-
+      margin: 10px;
   }
   .contact-card .icon {
       font-size: 20px;
@@ -2018,7 +2306,7 @@ video {
       color: #fff;
   }
   
-  .contact-text {
+  .contact-text p {
       font-size: 10px;
       color: #fff;
   }
@@ -2026,8 +2314,9 @@ video {
 @media screen and (max-width: 768px){
   .contact-content{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    height: 130px;
+    height: 400px! important;
     padding: 10px;
   }
   .contact-card {
@@ -2036,7 +2325,7 @@ video {
       text-align: center;
       width: 90%;
       height: 100px;
-      margin: 0 1rem! important;
+      margin: 10px;
 
   }
   .contact-card .icon {
@@ -2045,7 +2334,7 @@ video {
       color: #fff;
   }
   
-  .contact-text {
+  .contact-text p{
       font-size: 10px;
       color: #fff;
   }
@@ -2112,14 +2401,559 @@ video {
 .contact-map{
   width: 95%;
   margin-left: 2.5%;
-  height: 450px;
+  height: 400px;
+  margin-top: 9%;
+}
+
+.blog{
+  width: 100%;
+  height: 400px;
+  background:linear-gradient(rgba(0,0,0,0.5),#2f2f2f41), url(../images/blog\ bacc.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.blog h2{
+  color: #fff;
+  text-align: center;
+  margin-top: 8%;
+  font-size: 50px;
+}
+@media screen and (max-width: 280px){
+  .blog{
+    height: 430px;
+  }
+  
+  .blog h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 8%;
+    font-size: 30px;
+  }
+}
+@media screen and(max-width: 320px){
+  .blog {
+    height: 200px! important;
+  }
+  
+  .blog h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 8%;
+    font-size: 20px! important;
+  }
+}
+.blog p{
+  text-align: center;
+  color: #fff;
+}
+.blog a{
+  color: #fff;
+  text-decoration: none;
+}
+.blog a:hover{
+  background-color: #0F403C;
+  color: #fff;
+}
+ 
+.sorting-section {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #f6f6f6;
+}
+
+.sorting-dropdown {
+  margin-right: 20px;
+}
+#sort-select{
+  padding: 5px 25px;
+  border-radius: 10px;
+  border: 1px solid #f6f6f6;
+  background: #fff;
+  color: none;
+}
+#sort-select option{
+  border: none;
+}
+
+.view{
+  display: flex;
+  margin-left: 60%;
+}
+#view-select{
+  margin-left: 2%;
+}
+.view .grid-menu{
+  width: 20px;
+  height: 20px;
+}
+@media screen and (max-width: 280px){
+  .sorting-section{
+    flex-direction: column;
+    height: 60px;
+  }
+}
+@media screen and (max-width:320px){
+  .sorting-section{
+    flex-direction: column;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 768px){
+  .sorting-section{
+    flex-direction: column;
+    height: 60px;
+  }
+}
+
+.blog-content{
+  display: flex;
+  width: 100%;
+  height: 520px;
+  background: #f6f6f6;
+  padding: 20px;
+}
+
+.blog-card1{
+  width: 30%;
+  height: 460px;
+  background: #fff;
+  margin: 20px;
+}
+
+.blog-card2{
+  width: 30%;
+  height: 460px;
+  background: #fff;
+  margin: 20px;
+}
+.blog-text{
+  padding: 15px;
+  width: 100%;
+  height: 200px;
+}
+.blog-text p{
+  font-size: 13.5px;
+}
+.blog-read{
+  text-decoration: none;
+  color: brown;
+  font-size: 13px;
+  transition: 0.5s;
+}
+.blog-read:hover{
+  transition: 0.5s;
+  margin-left: 3%;
+}
+
+.blog-search{
+  width: 30%;
+  height: 400px;
+  margin: 20px;
+}
+
+.blog-card1 .blog-card-image{
+  width: 100%;
+  height: 250px;
+  background: url(../images/picnic\ 3.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-card2 .blog-card-image{
+  width: 100%;
+  height: 250px;
+  background: url(../images/covid\ 19.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.card-text-btn{
+  padding: 5px;
+  width: 30%;
+  height: 40px;
+  border: none;
+  color: #fff;
+  background: #0F403C;
+  margin-top: 57.2%;
+}
+
+.search-blog{
+  width: 80%;
+  height: 30px;
+  border-bottom: 1px solid #333;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.blod-search{
+  margin: 5px;
+  background: transparent;
+  border: none;
+}
+#blog-glass{
+  color: #000000;
+  margin-left: 28%;
+  font-size: 13px;
+}
+.blog-search-text{
+  width: 100%;
+  height: 320px;
+  margin-top: 6%;
+  padding: 10px;
+}
+
+.cate-hr{
+  width: 15%;
+  height: 3px;
+  border: none;
+  background: brown;
 }
 
 
+@media screen and (max-width: 320px){
+  .blog-content{
+    flex-direction: column;
+    height: 1500px;
+    justify-content: space-between;
+  }
+  .blog-card1{
+    width: 90%;
+    height: 520px;
+    background: #fff;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  
+  .blog-card2{
+    width: 90%;
+    height: 520px;
+    background: #fff;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  .blog-text p{
+    font-size: 10px;
+  }
+  .blog-search{
+    width: 90%;
+    height: 460px;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  .card-text-btn{
+    width: 50%;
+    margin-top: 83%! important;
+  }
+  
+  .search-blog{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .blod-search{
+    font-size: 10px;
+  }
+  #blog-glass{
+    margin-left: 18%! important;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .blog-content{
+    flex-direction: column;
+    height: 1500px;
+    justify-content: space-between;
+  }
+  .blog-card1{
+    width: 90%;
+    height: 520px;
+    background: #fff;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  
+  .blog-card2{
+    width: 90%;
+    height: 520px;
+    background: #fff;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  .blog-text p{
+    font-size: 10px;
+  }
+  .blog-search{
+    width: 90%;
+    height: 460px;
+    margin-left: 5%;
+    margin: 20px;
+  }
+  .card-text-btn{
+    width: 50%;
+    margin-top: 63%;
+  }
+  
+  .search-blog{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .blod-search{
+    font-size: 13px;
+  }
+  #blog-glass{
+    margin-left: 60%;
+  }
+}
+
+.blog-card1 .blog-card-image1{
+  width: 100%;
+  height: 250px;
+  background: url(../images/beach\ vacation.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-card2 .blog-card-image2{
+  width: 100%;
+  height: 250px;
+  background: url(../images/summer.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-card1 .blog-card-image5{
+  width: 100%;
+  height: 250px;
+  background: url(../images/health\ and\ wellness\ travel.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-card2 .blog-card-image6{
+  width: 100%;
+  height: 250px;
+  background: url(../images/historical\ and\ cultural\ landmark.jpeg);
+  background-size: cover;
+  background-position: center;
+}
 
 
+.blog-recent{
+  width: 30%;
+  height: 460px;
+  margin: 20px;
+}
+.blog-recent-card{
+  display: flex;
+  width: 90%;
+  height: 90px;
+  margin: 3px;
+}
+.picnic-image{
+  width: 45%;
+  height: 90px;
+}
+.picnic-img{
+  width: 100%;
+  height: 90px;
+}
+.picnic-text{
+  width: 52%;
+  height: 90px;
+  padding: 3px;
+  margin-left: 2%;
+}
+@media screen and (max-width:280px){
+  .blog-recent{
+    width: 100%;
+    margin: 2px;
+    height: 900px;
+  }
+}
+@media screen and (max-width: 320px){
+  .blog-recent{
+    width: 100%;
+    margin: 2px;
+    height: 900px;
+  }
+}
+#comment-icon{
+  font-size: 20px;
+  color: brown;
+}
 
+.special-offer{
+  width: 100%;
+  height: 250px;
+  background: #0F403C;
+}
+.offer-text{
+  width: 90%;
+  height: 140px;
+  margin-left: 5%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.offer-text h2{
+  margin-top: 3%;
+  font-size: 33px;
+}
+.offer-text p{
+  color: #fff;
+}
 
- 
+.offer-suscribe{
+  display: flex;
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+}
+.suscribe{
+  padding: 6px;
+  width: 40%;
+  height: 50px;
+  background: #fff;
+  margin-left: 23%;
+}
+.suscribe-input{
+  width: 95%;
+  height: 40px;
+  border: none;
+}
+.suscribe-btn{
+  width: 10%;
+  height: 50px;
+  border: none;
+  margin-left: 0.5%;
+  align-items: center;
+  justify-content: center;
+  animation: animate 2s linear infinite;
+ cursor: pointer;
+}
 
+@keyframes animate {
+  0%{
+    box-shadow: 0 0 0 rgba(255, 72, 0, 0.7);
+  }
+  40%{
+    box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+  }
 
+  80%{
+    box-shadow: 0 0 0 50px rgb(255, 180, 7, 0);
+  }
+  100%{
+    box-shadow: 0 0 0 rgb(255, 193, 7, 0) }
+}
+
+@media screen and (max-width: 280px){
+  .special-offer{
+    height: 200px;
+  }
+  .offer-text{
+    width:100%;
+    margin-left: 0%;
+    padding: 10px;
+  }
+  .offer-text h2{
+    margin-top: 3%;
+    font-size: 16px;
+  }
+  
+  .offer-suscribe{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-left: 0%;
+
+  }
+  .suscribe{
+    padding: 0px;
+    width: 60%;
+    height: 40px;
+    background: #fff;
+    margin-left: 2%;
+  }
+  .suscribe-input{
+    width: 80%;
+  }
+  .suscribe-btn{
+    width: 30%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .special-offer{
+    height: 200px;
+  }
+  .offer-text{
+    width:100%;
+    margin-left: 0%;
+    padding: 10px;
+  }
+  .offer-text h2{
+    margin-top: 3%;
+    font-size: 16px;
+  }
+  
+  .offer-suscribe{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-left: 0%;
+
+  }
+  .suscribe{
+    padding: 0px;
+    width: 60%;
+    height: 40px;
+    background: #fff;
+    margin-left: 2%;
+  }
+  .suscribe-input{
+    width: 80%;
+  }
+  .suscribe-btn{
+    width: 30%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .special-offer{
+    height: 200px;
+  }
+  .offer-text{
+    width:100%;
+    margin-left: 0%;
+    padding: 10px;
+  }
+  .offer-text h2{
+    margin-top: 3%;
+    font-size: 16px;
+  }
+  
+  .offer-suscribe{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-left: 0%;
+
+  }
+  .suscribe{
+    padding: 0px;
+    width: 60%;
+    height: 40px;
+    background: #fff;
+    margin-left: 2%;
+  }
+  .suscribe-input{
+    width: 80%;
+  }
+  .suscribe-btn{
+    width: 30%;
+    height: 40px;
+  }
+}

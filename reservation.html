@@ -26,16 +26,21 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <div class="reservation">
-        <div class="navbar" id="myNavbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="reservation.html">Reservations</a>
-            <a href="contact.html">Contact</a>
-            <input type="text" placeholder="Search..."  class="search-input">
-            <button class="search-button">Search</button>
-            <a class="icon" href="javascript:void(0);" onclick="toggleNavbar()">&#9776;</a>
-          </div>
+      <div class="navbar" id="myNavbar">
+        <div class="logo">
+          <img src="./images/pathfinder-fotor-bg-remover-20230523214440.png" class="logo-img">
+        </div>
+  
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="reservation.html">Reservations</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <input type="text" placeholder="Search..." class="search-input">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a class="icon" href="javascript:void(0);" onclick="toggleNavbar()">&#9776;</a>
+      </div>
           <h2>RESERVATION</h2>
          <p><a href="index.html">Home</a> > Reservation</p>
 
@@ -88,20 +93,21 @@
       </div>
         <img src="./images/pathfinder travel and tour graphic.jpg" class="img">
       </div>
-      <footer class="footer">
+
+       <footer class="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
               <h3>Contact Us</h3>
               <p>
                 <strong>Pathfinder Travel and Tour</strong><br>
-                1234 Traveler's Lane<br>
-                Cityville, State 12345<br>
-                Country
+                1234 Spintex Road.<br>
+                Accra - Tema<br>
+                Ghana
               </p>
               <p>
-                <strong>Email:</strong> info@traveladventures.com<br>
-                <strong>Phone:</strong> +1 (123) 456-7890<br>
+                <strong>Email:</strong> info@pathfinderstravelandtours.com<br>
+                <strong>Phone:</strong> +233 20 742 2456<br>
               </p>
             </div>
             <div class="col-md-4">
@@ -137,5 +143,16 @@
           </div>
         </div>
       </footer>
+
+      <script>
+        function toggleNavbar() {
+          var navbar = document.getElementById("myNavbar");
+          if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+          } else {
+            navbar.className = "navbar";
+          }
+        }
+      </script>
       </head>
       </html>
