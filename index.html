@@ -12,19 +12,26 @@
     <!----creating icon----->
     <link href="./images/pathfinder-fotor-bg-remover-20230523214440.png" rel="icon">
     
+    
     <!-----Linking font awesome------>
     <link rel="stylesheet" href="./fonts/css/all.css">
     <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap"
-     rel="stylesheet">
+
+     <!--Linking External Fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+                rel="stylesheet">
+
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
   
     <!-------Linking external css------->
     <link rel="stylesheet" href="./css/style.css">
-
+</head>
+<body>
+  
       <div class="navbar" id="myNavbar">
         <div class="logo">
           <img src="./images/pathfinder-fotor-bg-remover-20230523214440.png" class="logo-img">
@@ -37,8 +44,10 @@
         <a href="reservation.html">Reservations</a>
         <a href="contact.html">Contact</a>
         <a href="blog.html">Blog</a>
+        <!-- <div class="search-button">
         <input type="text" placeholder="Search..." class="search-input">
-        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="search-btn"><i class='bx bx-search-alt-2' id="search-glass"></i></button>
+      </div> -->
         <a class="icon" href="javascript:void(0);" onclick="toggleNavbar()">&#9776;</a>
       </div>
 
@@ -47,37 +56,43 @@
           <source src="./videos/slideshow.mp4">
         </video>
         <div class="video-content">
-          <h1>Welcome to The Pathfinder</h1>
+          <h1>Welcome to The Pathfinder<br>Travel and Tours.</h1>
+          <p>Embark on a voyage of discovery with Pathfinder, where every journey is crafted to create lasting memories.
+             As your trusted travel companion, we invite you to explore the world's wonders, experience diverse cultures,
+              and make each adventure uniquely yours.</p>
           <p>Explore, Discover and Create Unforgettable Memories.</p>
           <a href="#" class="book-button">Book Now</a>
         </div>
       </section>
 
       <section class="booking-container">
+       
         <div class="card">
           <div class="icon"><i class="fa-sharp fa-solid fa-ticket"  id="ticket"></i></div>
-          <h2>Flight Bookings</h2>
+          <span>Flight Bookings</span>
           <p>Get the best of flight bookings at Pathfinders Travel
             and Tours and explore the World with Ease!.</p>
         </div>
     
         <div class="card">
           <div class="icon"><i class="fa-brands fa-cc-visa"   id="visa"></i></div>
-          <h2>Visa Assistance</h2>
+        <span>Visa Assistance</span>
           <p>  We are ready to assist you with all your Visa needs.</p>
         </div>
+
+        
       </section>
 
       <section class="hotel-container">
         <div class="card">
-          <div class="icon"> <i class="fa-solid fa-hotel"   id="hotel"></i></i></div>
-          <h2>Hotel Reservations</h2>
+          <div class="icon"> <i class="fa-solid fa-hotel"  id="hotel"></i></i></div>
+          <span>Hotel Reservations</span>
           <p> With us you are guaranteed of the very best of Hotel Services.</p>
         </div>
     
         <div class="card">
           <div class="icon"> <i class="fa-sharp fa-solid fa-people-group"    id="group"></i></div>
-          <h2>Group Travels & Tours</h2>
+          <span>Group Travels & Tours</span>
           <p> We have you the best packages when it comes to group travels or tours with us.</p>
         </div>
       </section>
@@ -254,6 +269,8 @@
               Price: $ 6,012 - 8,000</p>
           </div>
         </div>
+
+        
       </section>
 
 
@@ -334,11 +351,11 @@
         </div>
       </section>
 
-      <div class="testimonial-topic">
+      <div class="countries-topic">
         <h2>We're Situated in Different Countries</h2>
       </div>
       <div class="globe">
-        <img src="./images/world map.jpg" class="world-map">
+        <img src="./images/pexels-nastyasensei-335393 (1).jpg" class="world-map"> 
       </div>
 
       <footer class="footer">
@@ -401,6 +418,7 @@
           }
         }
       </script>
-      </head>
+</body>
+
       </html>
       
